@@ -41,51 +41,6 @@ header {
         content: '';
         position: absolute; }
 
-/* === SCHEDULE === */
-.schedule {
-  border-spacing: 0; }
-
-.schedule__cell {
-  padding: 14px 14px 10px;
-  border-bottom: 1px solid #f3f0f0;
-  font-weight: 500; }
-  .schedule__cell.time {
-    font-weight: 500; }
-    .schedule__cell.time span {
-      font-size: .7em;
-      font-weight: 300;
-      color: #909090;
-      text-transform: uppercase; }
-  .schedule__cell .cell__loc {
-    font-size: .9em;
-    font-weight: 300;
-    color: #909090; }
-  .schedule__cell .cell__cat {
-    margin-top: 14px;
-    border-radius: 10px;
-    color: #fff;
-    padding: 4px 10px;
-    display: inline-block;
-    font-size: 12px; }
-    .schedule__cell .cell__cat.customer {
-      border: 1px solid #4CAF50;
-      background: #4CAF50; }
-    .schedule__cell .cell__cat.break-meals {
-      border: 1px solid #9e9e9e;
-      background: #9e9e9e; }
-    .schedule__cell .cell__cat.travel-registration {
-      border: 1px solid blueviolet;
-      background: blueviolet; }
-    .schedule__cell .cell__cat.pegaworld {
-      border: 1px solid #2196f3;
-      background: #2196f3; }
-    .schedule__cell .cell__cat.mobile {
-      border: 1px solid #ff9800;
-      background: #ff9800; }
-    .schedule__cell .cell__cat.ucd {
-      border: 1px solid #ff4383;
-      background: #ff4383; }
-
 /* === NAV === */
 .nav {
   padding: 4px 14px;
@@ -183,5 +138,50 @@ header {
   border: solid #0079bf;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg); }
+
+/* === SCHEDULE === */
+.schedule {
+  border-spacing: 0; }
+
+.schedule__cell {
+  padding: 14px 14px 10px;
+  border-bottom: 1px solid #f3f0f0;
+  font-weight: 500; }
+  .schedule__cell.time {
+    font-weight: 500; }
+    .schedule__cell.time span {
+      font-size: .7em;
+      font-weight: 300;
+      color: #909090;
+      text-transform: uppercase; }
+  .schedule__cell .cell__loc {
+    font-size: .9em;
+    font-weight: 300;
+    color: #909090; }
+  .schedule__cell .cell__cat {
+    margin-top: 14px;
+    border-radius: 10px;
+    color: #fff;
+    padding: 4px 10px;
+    display: inline-block;
+    font-size: 12px; }
+    .schedule__cell .cell__cat.customer {
+      border: 1px solid #4CAF50;
+      background: #4CAF50; }
+    .schedule__cell .cell__cat.break-meals {
+      border: 1px solid #9e9e9e;
+      background: #9e9e9e; }
+    .schedule__cell .cell__cat.travel-registration {
+      border: 1px solid blueviolet;
+      background: blueviolet; }
+    .schedule__cell .cell__cat.pegaworld {
+      border: 1px solid #2196f3;
+      background: #2196f3; }
+    .schedule__cell .cell__cat.mobile {
+      border: 1px solid #ff9800;
+      background: #ff9800; }
+    .schedule__cell .cell__cat.ucd {
+      border: 1px solid #ff4383;
+      background: #ff4383; }
 
 /*# sourceMappingURL=main.css.map */
