@@ -1,0 +1,24 @@
+/* === HEADER === */
+
+header {
+  background: #1F2555;
+  color: white;
+  margin: 0;
+  padding: 1em;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(21,22,25,0.4) 100%), url(../img/png/pw19-event-details-hero.png) no-repeat center center;
+  // background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(31,37,85,0.4) 100%), url(../img/png/pw19-event-details-hero.png) no-repeat center center;
+  .logo img {width: 25%; max-width: 105px;}
+
+  h3 {margin-top: 0;}
+  h1 {
+    margin-bottom: 0.1em;
+    span {
+      font-weight: 300;
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+      }
+    }
+  }
+}

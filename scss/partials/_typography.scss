@@ -1,0 +1,9 @@
+/* === TYPOGRAPHY === */
+
+body {font-size: 16px; font-family: 'Open Sans', sans-serif;}
+
+@media(min-width: 300px) {
+  body {font-size: 14px}
+  h1 {font-size: 24px; }
+  h3 {font-weight: 300;}
+}
