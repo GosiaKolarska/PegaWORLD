@@ -1,17 +1,19 @@
 /* === NAV === */
 
+@media(min-width: 280px) {
+
 .nav {
-  padding: 4px 14px;
+  padding: 4px 14px 4px 33px;
   top: 0;
   left: 0;
-  background: #fff;
   width: 100%;
   box-shadow: 0px 0px 2px 0px rgba(50, 50, 50, 0.3);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #E8EAEF;
- 
+  background-color: $app_bkg;
+  z-index: 1;
+  &.is-fixed {position: fixed; top: 39px;}
   ul {
     list-style: none;
     padding: 0;
@@ -23,17 +25,21 @@
         text-decoration: none; 
         padding: 0 .5em;
         opacity: 1;
-        color: #000;
+        color: $content;
         font-weight: 600;
       }
     }
   }
 }
 .days {
-  display: flex;
-  align-items: baseline;
   i {font-size: 14px;}
   .days__link {text-transform: uppercase;}
+  .slick-list {max-width: 55px;}
+  .slick-next {right: -21px;}
+  .slick-prev {left: -21px;}
+  .slick-arrow:before {color: $content;}
+  .slick-prev, .slick-next {height: 14px;}
+  .slick-prev:before, .slick-next:before {font-size: 19px;}
 }
 .dropdown {
   position: relative;
@@ -47,16 +53,19 @@
     border-radius: 4px 4px 0 0;
     margin-left: 4px; 
     padding: 10px;
-    z-index: 1;
+    z-index: 2;
+    cursor: pointer;
   }
   &.active i {
-    background-color: #fff;
+    background-color: $card_bkg;
   }
 }
 .dropdown__list {
-  background-color: #fff;
+  background-color: $card_bkg;
   position: absolute;
   right: 0;
+  top: 32px;
+  z-index: 1;
   box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.3);
   border-radius: 4px 0 4px 4px;
   display: none;
@@ -65,7 +74,7 @@
     padding: 14px;
   }
   .dropdown__item {
-    padding-bottom: 12px;
+    padding-bottom: 14px;
     &:last-child {padding-bottom: 2px;}
     input {
       margin: 7px;
@@ -78,7 +87,7 @@
         content: '';
         -webkit-appearance: none;
         background-color: transparent;
-        border: 1px solid #0079bf;
+        border: 1px solid $interactive_items;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
         padding: 7px;
         display: inline-block;
@@ -99,8 +108,45 @@
   left: 6px;
   width: 2.5px;
   height: 7px;
-  border: solid #0079bf;
+  border: solid $interactive_items;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
 
+.banner-mobile {
+  background: $app_header;
+  color: #fff;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 10px 14px;
+  font-weight: 600;
+  display: none;
+  justify-content: space-between;
+  &.is-fixed {
+    display: flex;
+    position: fixed;
+  }
+  .banner__title span {
+    font-weight: 30;
+  }
+  .banner__date {
+    font-weight: 300;
+  }
+}
+}
+
+@media(min-width: 1190px) {
+  .banner-mobile {display: none;}
+  .nav {padding: 0;}
+  .dropdown {
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.3);
+    position: fixed;
+    right: 0;
+    background: #fff;
+    top: 10%;
+  }
+  .dropdown__button .dropdown__quantity {
+    // padding-left: 14px;
+  }
+}

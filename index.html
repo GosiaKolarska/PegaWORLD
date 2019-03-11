@@ -10,6 +10,8 @@
     content="You won&#039;t find cartoon characters at PegaWorld. Instead, you&#039;ll hear success stories from the world&#039;s biggest brands, connect with 5,000 fellow business and tech leaders, and get an inside look at the newest and most powerful Pega technology." />
   <title>PegaWorld 2018 Design Track | Pega</title>
   <link rel="icon" type="image/png" sizes="16x16" href="./img/png/favicon-16x16.png">
+  <link rel="stylesheet" type="text/css" href="css/lib/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="css/lib/slick/slick.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
@@ -29,13 +31,19 @@
   </header>
 
   <!-- NAV -->
+  <div class="banner-mobile">
+    <div class="banner__title">PegaWORLD<span> Design Track</div>
+    <div class="banner__date">June 3 - 7 2018</div>
+  </div>
   <nav class="nav">
     <div class="days">
-      <i class="fas fa-angle-left"></i>
       <ul class="days__list">
         <li class="days__item"><a class="days__link">day 1</a></li>
+        <li class="days__item"><a class="days__link">day 2</a></li>
+        <li class="days__item"><a class="days__link">day 3</a></li>
+        <li class="days__item"><a class="days__link">day 4</a></li>
+        <li class="days__item"><a class="days__link">day 5</a></li>
       </ul>
-      <i class="fas fa-angle-right"></i>
     </div>
     <div class="dropdown">
       <div class="dropdown__button">
@@ -53,98 +61,450 @@
   </nav>
 
   <!-- SCHEDULE -->
-  <table class="schedule">
-    <tbody>
-      <tr class="schedule__row">
-        <td class="schedule__cell time">
-          up to 12:00 <span>AM</span>
-        </td>
-        <td class="schedule__cell">
-          <div class="cell__title">Check-in & Registration - Travel to PegaWORLD - Registration @</div>
-          <div class="cell__loc">Marriot Orlando</div>
-          <div class="cell__cat travel-registration">Travel & Registration</div>
-        </td>
-      </tr>
-      <tr class="schedule__row">
-        <td class="schedule__cell time">
-          1:00 <span>PM</span>
-        </td>
-        <td class="schedule__cell">
-          <div class="cell__title">Opening Remarks</div>
-          <div class="cell__loc">Room J1</div>
-        </td>
-      </tr>
-      <tr class="schedule__row">
-        <td class="schedule__cell time">
-          1:30 <span>PM</span>
-        </td>
-        <td class="schedule__cell">
-          <div class="cell__title">Strategic Applications and Competitive Intelligence</div>
-          <div class="cell__loc">Room J1</div>
-          <div class="cell__cat mobile">Mobile</div>
-        </td>
-      </tr>
-      <tr class="schedule__row">
-        <td class="schedule__cell time">
-          3:00 <span>PM</span>
-        </td>
-        <td class="schedule__cell">
-          <div class="cell__title">Break</div>
-          <div class="cell__cat break-meals">Breaks & Meals</div>
-        </td>
-      </tr>
-      <tr class="schedule__row">
-        <td class="schedule__cell time">
-          3:30 <span>PM</span>
-        </td>
-        <td class="schedule__cell">
-          <div class="cell__title">Customer Centricity & Consulting - Customer Panel</div>
-          <div class="cell__loc">Room J1</div>
-          <div class="cell__cat customer">Customer Centricity</div>
-        </td>
-      </tr>
-      <tr class="schedule__row">
-        <td class="schedule__cell time">
-          4:30 <span>PM</span>
-        </td>
-        <td class="schedule__cell">
-          <div class="cell__title">Customer Centricity & Consulting - Key Messages</div>
-          <div class="cell__loc">Room J1</div>
-          <div class="cell__cat customer">Customer Centricity</div>
-        </td>
-      </tr>
-      <tr class="schedule__row">
-        <td class="schedule__cell time">
 
-          5:15 <span>PM</span>
-        </td>
-        <td class="schedule__cell">
-          <div class="cell__title">Customer Experience - Don't Blow it!</div>
-          <div class="cell__loc">Room J1</div>
-          <div class="cell__cat customer">Customer Centricity</div>
-        </td>
-      </tr>
-      <tr class="schedule__row">
-        <td class="schedule__cell time">30 Mins</td>
-        <td class="schedule__cell">
-          <div class="cell__title">Travel Busses from Marriot - Registration for PegaWORLD</div>
-          <div class="cell__cat travel-registration">Travel & Registration</div>
-        </td>
-      </tr>
-      <tr class="schedule__row">
-        <td class="schedule__cell time">
-          6:30 <span>PM</span>
-        </td>
-        <td class="schedule__cell">
-          <div class="cell__title">PegaWORLD</div>
-          <div class="cell__loc">Reception & Dinner</div>
-          <div class="cell__cat break-meals">Breaks & Meals</div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="timeline">
+    <div class="day day-1">
+      <table class="schedule">
+        <thead>
+          <tr>
+            <th colspan="2">Day 1</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="schedule__row" data-category="travel-registration">
+            <td class="schedule__cell time">
+              up to 12:00 <span>AM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Check-in & Registration - Travel to PegaWORLD - Registration @</div>
+              <div class="cell__loc">Marriot Orlando</div>
+              <div class="cell__cat travel-registration">Travel & Registration</div>
+            </td>
+          </tr>
+          <tr class="schedule__row" data-category="pegaworld">
+            <td class="schedule__cell time">
+              1:00 <span>PM</span>
+            </td>
+            <td class="schedule__cell" data-category="pegaworld">
+              <div class="cell__title">Opening Remarks</div>
+              <div class="cell__loc">Room J1</div>
+              <div class="cell__cat pegaworld">PegaWORLD</div>
+            </td>
+          </tr>
+          <tr class="schedule__row" data-category="mobile">
+            <td class="schedule__cell time">
+              1:30 <span>PM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Strategic Applications and Competitive Intelligence</div>
+              <div class="cell__loc">Room J1</div>
+              <div class="cell__cat mobile">Mobile</div>
+            </td>
+          </tr>
+          <tr class="schedule__row" data-category="break-meals">
+            <td class="schedule__cell time">
+              3:00 <span>PM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Break</div>
+              <div class="cell__cat break-meals">Breaks & Meals</div>
+            </td>
+          </tr>
+          <tr class="schedule__row" data-category="customer-centercity">
+            <td class="schedule__cell time">
+              3:30 <span>PM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Customer Centricity & Consulting - Customer Panel</div>
+              <div class="cell__loc">Room J1</div>
+              <div class="cell__cat customer">Customer Centricity</div>
+            </td>
+          </tr>
+          <tr class="schedule__row" data-category="customer-centercity">
+            <td class="schedule__cell time">
+              4:30 <span>PM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Customer Centricity & Consulting - Key Messages</div>
+              <div class="cell__loc">Room J1</div>
+              <div class="cell__cat customer">Customer Centricity</div>
+            </td>
+          </tr>
+          <tr class="schedule__row" data-category="customer-centercity">
+            <td class="schedule__cell time">
 
+              5:15 <span>PM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Customer Experience - Don't Blow it!</div>
+              <div class="cell__loc">Room J1</div>
+              <div class="cell__cat customer">Customer Centricity</div>
+            </td>
+          </tr>
+          <tr class="schedule__row" data-category="travel-registration">
+            <td class="schedule__cell time">30 Mins</td>
+            <td class="schedule__cell">
+              <div class="cell__title">Travel Busses from Marriot - Registration for PegaWORLD</div>
+              <div class="cell__cat travel-registration">Travel & Registration</div>
+            </td>
+          </tr>
+          <tr class="schedule__row" data-category="break-meals">
+            <td class="schedule__cell time">
+              6:30 <span>PM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">PegaWORLD</div>
+              <div class="cell__loc">Reception & Dinner</div>
+              <div class="cell__cat break-meals">Breaks & Meals</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="day day-2">
+      <table class="schedule">
+        <thead>
+          <tr>
+            <th colspan="2">Day 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="schedule__row" data-category="pegaworld">
+            <td class="schedule__cell time">
+              8:00 <span>AM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">PegaWORLD</div>
+              <div class="cell__cat pegaworld">PegaWORLD</div>
+            </td>
+          </tr>
+
+          <tr class="schedule__row" data-category="pegaworld">
+            <td class="schedule__cell time">
+              6:00 <span>PM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">PegaWORLD: Customer Appreciation Event</div>
+              <div class="cell__loc">Universal Studios, Orlando</div>
+              <div class="cell__cat pegaworld">PegaWORLD</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="day day-3">
+      <table class="schedule">
+        <thead>
+          <tr>
+            <th colspan="2">Day 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="schedule__row" data-category="pegaworld">
+            <td class="schedule__cell time">
+              8:00 <span>AM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">PegaWORLD</div>
+              <div class="cell__cat pegaworld">PegaWORLD</div>
+            </td>
+          </tr>
+
+          <tr class="schedule__row" data-category="user-centered-design">
+            <td class="schedule__cell time">
+              6:00 <span>PM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Design Track: Event Kayak Eco-Tour</div>
+              <div class="cell__loc">Shingle Creek</div>
+              <div class="cell__cat user-centered-design">User Centered Design</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="day day-4">
+      <table class="schedule">
+        <thead>
+          <tr>
+            <th colspan="4">Day 4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="schedule__row" data-category="break-meals">
+            <td class="schedule__cell time">
+              7:00 <span>AM</span>
+            </td>
+            <td class="schedule__cell" colspan="3">
+              <div class="cell__title">Breakfast</div>
+              <div class="cell__cat break-meals">Breaks & Meals</div>
+            </td>
+          </tr>
+
+          <tr class="schedule__row" data-category="mobile">
+            <td class="schedule__cell time">
+              8:15 <span>AM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Mobile: Overview</div>
+              <div class="cell__loc">Room K</div>
+              <div class="cell__cat mobile">Mobile</div>
+            </td>
+
+            <td class="schedule__cell">
+              <div class="cell__title">User Centered Design: Overview</div>
+              <div class="cell__loc">Room L</div>
+              <div class="cell__cat user-centered-design">User Centered Design</div>
+            </td>
+          </tr>
+
+          <tr class="schedule__row" data-category="user-centered-design">
+            <td class="schedule__cell time">
+              8:45 <span>AM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">User Centered Design: Overview</div>
+              <div class="cell__loc">Room K</div>
+              <div class="cell__cat user-centered-design">User Centered Design</div>
+            </td>
+
+            <td class="schedule__cell">
+              <div class="cell__title">Mobile: Overview</div>
+              <div class="cell__loc">Room L</div>
+              <div class="cell__cat mobile">Mobile</div>
+            </td>
+
+          </tr>
+
+          <tr class="schedule__row" data-category="user-centered-design">
+            <td class="schedule__cell time">
+              9:15 <span>AM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">User Centered Design: Implementations</div>
+              <div class="cell__loc">Room K</div>
+              <div class="cell__cat user-centered-design">User Centered Design</div>
+            </td>
+
+            <td class="schedule__cell">
+              <div class="cell__title">Mobile- It's all about the User Experience</div>
+              <div class="cell__loc">Room L</div>
+              <div class="cell__cat mobile">Mobile</div>
+            </td>
+          </tr>
+
+          <tr class="schedule__row" data-category="break-meals">
+            <td class="schedule__cell time">
+              10:35/45 <span>AM</span>
+            </td>
+            <td class="schedule__cell" colspan="2">
+              <div class="cell__title">Break</div>
+              <div class="cell__cat break-meals">Breaks & Meals</div>
+            </td>
+          </tr>
+
+          <tr class="schedule__row" data-category="user-centered-design">
+            <td class="schedule__cell time">
+              10:50 <span>AM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">User Centered Design: Nuts and Bolts</div>
+              <div class="cell__loc">Room K</div>
+              <div class="cell__cat user-centered-design">User Centered Design</div>
+            </td>
+
+            <td class="schedule__cell">
+              <div class="cell__title">Mobile: Publishing an App & Offline Considerations </div>
+              <div class="cell__loc">Room L</div>
+              <div class="cell__cat mobile">Mobile</div>
+            </td>
+          </tr>
+
+          </td>
+          </tr>
+          <tr class="schedule__row" data-category="break-meals">
+            <td class="schedule__cell time">
+              12:20 <span>PM</span>
+            </td>
+            <td class="schedule__cell" colspan="3">
+              <div class="cell__title">Lunch</div>
+              <div class="cell__cat break-meals">Breaks & Meals</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+          <tr class="schedule__row" data-category="mobile">
+            <td class="schedule__cell time">
+              1:05 <span>PM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Mobile - It's all about the User Experience</div>
+              <div class="cell__loc">Room K</div>
+              <div class="cell__cat mobile">Mobile</div>
+            </td>
+
+            <td class="schedule__cell">
+              <div class="cell__title">User Centered Design: Nuts and Bolts</div>
+              <div class="cell__loc">Room L</div>
+              <div class="cell__cat user-centered-design">User Centered Design</div>
+            </td>
+
+          </tr>
+          <tr class="schedule__row" data-category="mobile">
+            <td class="schedule__cell time">
+              2:35 <span>PM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Mobile: Publishing an App & Offline Considerations </div>
+              <div class="cell__loc">Room K</div>
+              <div class="cell__cat mobile">Mobile</div>
+            </td>
+
+            <td class="schedule__cell">
+              <div class="cell__title">User Centered Design: Implementations</div>
+              <div class="cell__loc">Room K</div>
+              <div class="cell__cat user-centered-design">User Centered Design</div>
+            </td>
+          </tr>
+          </td>
+          </tr>
+          <tr class="schedule__row" data-category="break-meals">
+            <td class="schedule__cell time">
+              3:55 <span>PM</span>
+            </td>
+            <td class="schedule__cell" colspan="3">
+              <div class="cell__title">Break</div>
+              <div class="cell__cat break-meals">Breaks & Meals</div>
+            </td>
+          </tr>
+
+          <tr class="schedule__row" data-category="customer-centercity">
+            <td class="schedule__cell time">
+              4:15 <span>PM</span>
+            </td>
+            <td class="schedule__cell" colspan="3">
+              <div class="cell__title">Upgrade Information</div>
+              <div class="cell__loc">Room J1</div>
+            </td>
+          </tr>
+
+          <tr class="schedule__row" data-category="customer-centercity">
+            <td class="schedule__cell time">
+              5:30 <span>PM</span>
+            </td>
+            <td class="schedule__cell" colspan="3">
+              <div class="cell__title">Customer Centricity - Introduction/Q&A </div>
+              <div class="cell__loc">Room J1</div>
+              <div class="cell__cat customer">Customer Centricity</div>
+            </td>
+          </tr>
+
+          <tr class="schedule__row" data-category="user-centered-design">
+            <td class="schedule__cell time">
+              7:30 <span>PM</span>
+            </td>
+            <td class="schedule__cell" colspan="3">
+              <div class="cell__title">Design Track Event - Dinner</div>
+              <div class="cell__loc">Marriott Orlando World Center</div>
+              <div class="cell__cat user-centered-design">User Centered Design</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="day day-5">
+      <table class="schedule">
+        <thead>
+          <tr>
+            <th colspan="2">Day 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="schedule__row" data-category="break-meals">
+            <td class="schedule__cell time">
+              7:00 <span>AM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Breakfast</div>
+              <div class="cell__cat break-meals">Breaks & Meals</div>
+            </td>
+          </tr>
+          <tr class="schedule__row" data-category="customer-centercity">
+            <td class="schedule__cell time">
+              8:15 <span>AM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Customer Centricity- Breakouts</div>
+              <div class="cell__loc">Room J1</div>
+              <div class="cell__cat customer">Customer Centricity</div>
+            </td>
+          </tr>
+          <tr class="schedule__row" data-category="break-meals">
+            <td class="schedule__cell time">
+              10:15 <span>AM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Break</div>
+              <div class="cell__cat break-meals">Breaks & Meals</div>
+            </td>
+          </tr>
+          <tr class="schedule__row" data-category="customer-centercity">
+            <td class="schedule__cell time">
+              10:45 <span>AM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Customer Centricity - Breakouts</div>
+              <div class="cell__loc">Room J1</div>
+              <div class="cell__cat customer">Customer Centricity</div>
+            </td>
+          </tr>
+          <tr class="schedule__row" data-category="break-meals">
+            <td class="schedule__cell time">
+              12:45 <span>PM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Lunch</div>
+              <div class="cell__cat break-meals">Breaks & Meals</div>
+            </td>
+          </tr>
+          <tr class="schedule__row" data-category="customer-centercity">
+            <td class="schedule__cell time">
+              1:45 <span>PM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Customer Centricity - Action Planning Debrief</div>
+              <div class="cell__loc">Room J1</div>
+              <div class="cell__cat customer">Customer Centricity</div>
+            </td>
+          </tr>
+          <tr class="schedule__row">
+            <td class="schedule__cell time">
+              2:30 <span>PM</span>
+            </td>
+            <td class="schedule__cell">
+              <div class="cell__title">Closing Remarks</div>
+              <div class="cell__loc">Room J1</div>
+            </td>
+          </tr>
+
+          <tr class="schedule__row" data-category="travel-registration">
+            <td class="schedule__cell time">from 3:00</td>
+            <td class="schedule__cell">
+              <div class="cell__title">Travel from PegaWORLD - Bus service to airport</div>
+              <div class="cell__cat travel-registration">Travel & Registration</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <script type="text/javascript" src="js/lib/slick.min.js"></script>
   <script src="./js/dropdown.js"></script>
 </body>
 

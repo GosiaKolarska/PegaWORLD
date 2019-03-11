@@ -17,18 +17,51 @@ $(document).ready(function () {
 
   // JSON of categories
   var categories = [
-    { name: 'ALL', icon: '' },
-    { name: 'Travel & Registration', icon: '&#xf072' },
-    { name: 'Breaks & Meals', icon: '&#xf7b6' },
-    { name: 'PegaWORLD', icon: '&#xf004' },
-    { name: 'Mobile', icon: '&#xf3cd' },
-    { name: 'Customer Centricity', icon: '&#xf0c0' },
-    { name: 'User Centered Design', icon: '&#xf303' },
+    { name: 'All', slug: 'all' },
+    { name: 'Travel & Registration', slug: 'travel-registration' },
+    { name: 'Breaks & Meals', slug: 'break-meals' },
+    { name: 'PegaWORLD', slug: 'pegaworld' },
+    { name: 'Mobile', slug: 'mobile' },
+    { name: 'Customer Centricity', slug: 'customer-centercity' },
+    { name: 'User Centered Design', slug: 'user-centered-design' },
 
   ];
 
   for (var j = 0; j < categories.length; j++) {
-    $('.dropdown').find('.list').append($('<li class="dropdown__item"><input name="' + categories[j].name + '" type="checkbox" id="' + categories[j].name + '"><span class="fas">' + categories[j].icon + '</span><label for="' + categories[j].name + '">' + categories[j].name + '</label></li>'))
+    let catSlug = categories[j].slug;
+    $('.dropdown').find('.list').append($('<li class="dropdown__item"><input name="' + catSlug + '" type="checkbox" id="' + catSlug + '" data-category="' + catSlug + '" value="' + catSlug + '" ><label for="' + catSlug + '">' + categories[j].name + '</label></li>'))
   }
+  $('.timeline').slick({
+    adaptiveHeight: true,
+    infinite: false,
+    slide: ".day",
+    arrows: false,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 1190,
+        settings: 'unslick'
+      }
+    ]
+
+  });
+  $('.days__list').slick({
+    asNavFor: '.timeline',
+    infinite: false,
+    slide: ".days__item",
+    adaptiveHeight: true,
+    respondTo: 'window'
+  });
 
 })
+
+$(window).scroll(function () {
+  if ($(window).scrollTop() >= 134) {
+    $('nav').addClass('is-fixed');
+    $('.banner-mobile').addClass('is-fixed');
+  }
+  else {
+    $('nav').removeClass('is-fixed');
+    $('.banner-mobile').removeClass('is-fixed');
+  }
+});

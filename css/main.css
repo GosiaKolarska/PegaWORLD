@@ -1,17 +1,19 @@
 /* === COLORS === */
 /* === TYPOGRAPHY === */
-body {
-  font-size: 16px;
-  font-family: 'Open Sans', sans-serif; }
-
-@media (min-width: 300px) {
+@media (min-width: 280px) {
   body {
-    font-size: 14px; }
+    font-size: 14px;
+    color: #10132E;
+    font-family: 'Open Sans', sans-serif; }
 
   h1 {
-    font-size: 24px; }
+    font-size: 19px; }
+
+  h2 {
+    font-size: 17px; }
 
   h3 {
+    font-size: 15.5px;
     font-weight: 300; } }
 /* === BASE === */
 * {
@@ -21,167 +23,245 @@ body {
   margin: 0; }
 
 /* === HEADER === */
-header {
-  background: #1F2555;
-  color: white;
-  margin: 0;
-  padding: 1em;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(21, 22, 25, 0.4) 100%), url(../img/png/pw19-event-details-hero.png) no-repeat center center; }
-  header .logo img {
-    width: 25%;
-    max-width: 105px; }
-  header h3 {
-    margin-top: 0; }
-  header h1 {
-    margin-bottom: 0.1em; }
-    header h1 span {
-      font-weight: 300;
-      position: relative; }
-      header h1 span:before {
-        content: '';
-        position: absolute; }
-
+@media (min-width: 280px) {
+  header {
+    background: #1F2555;
+    color: #fff;
+    margin: 0;
+    padding: 1em;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(21, 22, 25, 0.4) 100%), url(../img/png/pw19-event-details-hero.png) no-repeat center center;
+    background-size: cover; }
+    header .logo img {
+      width: 25%;
+      max-width: 105px; }
+    header h3 {
+      margin-top: 0; }
+    header h1 {
+      margin-bottom: 0.1em; }
+      header h1 span {
+        font-weight: 300;
+        position: relative; }
+        header h1 span:before {
+          content: '';
+          position: absolute; } }
 /* === NAV === */
-.nav {
-  padding: 4px 14px;
-  top: 0;
-  left: 0;
-  background: #fff;
-  width: 100%;
-  box-shadow: 0px 0px 2px 0px rgba(50, 50, 50, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #E8EAEF; }
-  .nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-    .nav ul li {
-      display: inline-block; }
-      .nav ul li a {
-        display: block;
-        text-decoration: none;
-        padding: 0 .5em;
-        opacity: 1;
-        color: #000;
-        font-weight: 600; }
+@media (min-width: 280px) {
+  .nav {
+    padding: 4px 14px 4px 33px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 0px 2px 0px rgba(50, 50, 50, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E8EAEF;
+    z-index: 1; }
+    .nav.is-fixed {
+      position: fixed;
+      top: 39px; }
+    .nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      .nav ul li {
+        display: inline-block; }
+        .nav ul li a {
+          display: block;
+          text-decoration: none;
+          padding: 0 .5em;
+          opacity: 1;
+          color: #10132E;
+          font-weight: 600; }
 
-.days {
-  display: flex;
-  align-items: baseline; }
   .days i {
     font-size: 14px; }
   .days .days__link {
     text-transform: uppercase; }
+  .days .slick-list {
+    max-width: 55px; }
+  .days .slick-next {
+    right: -21px; }
+  .days .slick-prev {
+    left: -21px; }
+  .days .slick-arrow:before {
+    color: #10132E; }
+  .days .slick-prev, .days .slick-next {
+    height: 14px; }
+  .days .slick-prev:before, .days .slick-next:before {
+    font-size: 19px; }
 
-.dropdown {
-  position: relative; }
+  .dropdown {
+    position: relative; }
 
-.dropdown__button {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; }
-  .dropdown__button .dropdown__quantity {
-    display: inline-block; }
-  .dropdown__button .fa-filter {
-    border-radius: 4px 4px 0 0;
-    margin-left: 4px;
-    padding: 10px;
-    z-index: 1; }
-  .dropdown__button.active i {
-    background-color: #fff; }
-
-.dropdown__list {
-  background-color: #fff;
-  position: absolute;
-  right: 0;
-  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.3);
-  border-radius: 4px 0 4px 4px;
-  display: none; }
-  .dropdown__list .list {
-    min-width: 210px;
-    padding: 14px; }
-  .dropdown__list .dropdown__item {
-    padding-bottom: 12px; }
-    .dropdown__list .dropdown__item:last-child {
-      padding-bottom: 2px; }
-    .dropdown__list .dropdown__item input {
-      margin: 7px;
-      display: none; }
-    .dropdown__list .dropdown__item label {
-      position: relative;
+  .dropdown__button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+    .dropdown__button .dropdown__quantity {
+      display: inline-block; }
+    .dropdown__button .fa-filter {
+      border-radius: 4px 4px 0 0;
+      margin-left: 4px;
+      padding: 10px;
+      z-index: 2;
       cursor: pointer; }
-      .dropdown__list .dropdown__item label::before {
-        content: '';
-        -webkit-appearance: none;
-        background-color: transparent;
-        border: 1px solid #0079bf;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
-        padding: 7px;
-        display: inline-block;
+    .dropdown__button.active i {
+      background-color: #ffffff; }
+
+  .dropdown__list {
+    background-color: #ffffff;
+    position: absolute;
+    right: 0;
+    top: 32px;
+    z-index: 1;
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.3);
+    border-radius: 4px 0 4px 4px;
+    display: none; }
+    .dropdown__list .list {
+      min-width: 210px;
+      padding: 14px; }
+    .dropdown__list .dropdown__item {
+      padding-bottom: 14px; }
+      .dropdown__list .dropdown__item:last-child {
+        padding-bottom: 2px; }
+      .dropdown__list .dropdown__item input {
+        margin: 7px;
+        display: none; }
+      .dropdown__list .dropdown__item label {
         position: relative;
-        vertical-align: middle;
-        cursor: pointer;
-        margin-right: 14px; }
-    .dropdown__list .dropdown__item span {
-      display: none; }
+        cursor: pointer; }
+        .dropdown__list .dropdown__item label::before {
+          content: '';
+          -webkit-appearance: none;
+          background-color: transparent;
+          border: 1px solid #295ED9;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+          padding: 7px;
+          display: inline-block;
+          position: relative;
+          vertical-align: middle;
+          cursor: pointer;
+          margin-right: 14px; }
+      .dropdown__list .dropdown__item span {
+        display: none; }
 
-.dropdown__item input:checked ~ label:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 2.5px;
-  height: 7px;
-  border: solid #0079bf;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg); }
+  .dropdown__item input:checked ~ label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 2.5px;
+    height: 7px;
+    border: solid #295ED9;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg); }
 
-/* === SCHEDULE === */
-.schedule {
-  border-spacing: 0; }
-
-.schedule__cell {
-  padding: 14px 14px 10px;
-  border-bottom: 1px solid #f3f0f0;
-  font-weight: 500; }
-  .schedule__cell.time {
-    font-weight: 500; }
-    .schedule__cell.time span {
-      font-size: .7em;
-      font-weight: 300;
-      color: #909090;
-      text-transform: uppercase; }
-  .schedule__cell .cell__loc {
-    font-size: .9em;
-    font-weight: 300;
-    color: #909090; }
-  .schedule__cell .cell__cat {
-    margin-top: 14px;
-    border-radius: 10px;
+  .banner-mobile {
+    background: #1F2555;
     color: #fff;
-    padding: 4px 10px;
-    display: inline-block;
-    font-size: 12px; }
-    .schedule__cell .cell__cat.customer {
-      border: 1px solid #4CAF50;
-      background: #4CAF50; }
-    .schedule__cell .cell__cat.break-meals {
-      border: 1px solid #9e9e9e;
-      background: #9e9e9e; }
-    .schedule__cell .cell__cat.travel-registration {
-      border: 1px solid blueviolet;
-      background: blueviolet; }
-    .schedule__cell .cell__cat.pegaworld {
-      border: 1px solid #2196f3;
-      background: #2196f3; }
-    .schedule__cell .cell__cat.mobile {
-      border: 1px solid #ff9800;
-      background: #ff9800; }
-    .schedule__cell .cell__cat.ucd {
-      border: 1px solid #ff4383;
-      background: #ff4383; }
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 10px 14px;
+    font-weight: 600;
+    display: none;
+    justify-content: space-between; }
+    .banner-mobile.is-fixed {
+      display: flex;
+      position: fixed; }
+    .banner-mobile .banner__title span {
+      font-weight: 30; }
+    .banner-mobile .banner__date {
+      font-weight: 300; } }
+@media (min-width: 1190px) {
+  .banner-mobile {
+    display: none; }
+
+  .nav {
+    padding: 0; }
+
+  .dropdown {
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.3);
+    position: fixed;
+    right: 0;
+    background: #fff;
+    top: 10%; } }
+/* === SCHEDULE === */
+@media (min-width: 280px) {
+  .schedule {
+    border-spacing: 0;
+    width: 100%; }
+
+  tr.hidden {
+    height: 0; }
+
+  thead {
+    display: none; }
+
+  .schedule__cell {
+    border-bottom: 1px solid #CACDD6;
+    font-weight: 500; }
+    .schedule__cell:nth-child(even) {
+      padding: 14px 14px 10px 7px; }
+    .schedule__cell:nth-child(odd) {
+      padding: 14px 14px 10px; }
+    .schedule__cell:nth-child(3) {
+      border-left: 1px solid #CACDD6; }
+    .schedule__cell.time {
+      font-weight: 500; }
+      .schedule__cell.time span {
+        font-size: 11px;
+        font-weight: 300;
+        color: #626475;
+        text-transform: uppercase; }
+    .schedule__cell .cell__loc {
+      font-size: 13px;
+      font-weight: 300;
+      color: #626475; }
+    .schedule__cell .cell__cat {
+      margin-top: 14px;
+      border-radius: 10px;
+      color: #fff;
+      padding: 4px 10px;
+      display: inline-block;
+      font-size: 12px; }
+      .schedule__cell .cell__cat.customer {
+        border: 1px solid #20AA50;
+        background: #20AA50; }
+      .schedule__cell .cell__cat.break-meals {
+        border: 1px solid #585B73;
+        background: #585B73; }
+      .schedule__cell .cell__cat.travel-registration {
+        border: 1px solid #FD6000;
+        background: #FD6000; }
+      .schedule__cell .cell__cat.pegaworld {
+        border: 1px solid #295ED9;
+        background: #295ED9; }
+      .schedule__cell .cell__cat.mobile {
+        border: 1px solid #FEB53A;
+        background: #FEB53A; }
+      .schedule__cell .cell__cat.user-centered-design {
+        border: 1px solid #E10B81;
+        background: #E10B81; } }
+@media (min-width: 1190px) {
+  .timeline {
+    display: flex; }
+
+  .day {
+    border-right: 1px solid #CACDD6; }
+
+  thead {
+    display: table-header-group; }
+
+  thead th {
+    text-transform: uppercase;
+    border-bottom: 2px solid #CACDD6;
+    padding: 14px 0;
+    background-color: #E8EAEF; }
+
+  .days {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */
